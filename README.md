@@ -38,6 +38,12 @@ The password and secret can be passed via the Environment Variables `OPENCONNECT
 
 Passing cert files can easily be done by adding to the `volumes` definition in `docker-compose.yml`
 
+## startVPNBrowser.sh
+This wrapper script starts a `google-chrome-beta` together with the docker container and on close terminates both. I personally use `google-chrome-beta` to avoid clashing with my running `google-chrome-stable`...
+
+This is clearly more to be seen as an Example than a way to use it for everyone.
+
+
 ## Inspiration 
 Inspiration for this came from 
 https://github.com/makinacorpus/docker-fortivpn
