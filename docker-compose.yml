@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  fortivpn-proxy:
+    build: build/openconnect-proxy
+    privileged: true
+    environment:
+      - OPENCONNECTPROXY_PASSCODE=${OPENCONNECTPROXY_PASSCODE}
+      - OPENCONNECTPROXY_TOKEN_SECRET=${OPENCONNECTPROXY_TOKEN_SECRET}
+    volumes: 
+      - ~/.openconnect/config:/etc/openconnect/config:ro
+    ports:
+      - 127.0.0.1:58443:8443
